@@ -40,6 +40,46 @@ const IndexPage = () => (
               <h2>Learning Center</h2>
             </a>
           </div>
+          <div style={{ display: 'flex' }}>
+            <div className='jumbotron gradient' style={{ width: '44%' }}>
+              <a
+                css={css`
+                  color: #000;
+                  &:hover {
+                    color: #777;
+                  }
+                `}
+                href='https://www.panofuture.com/'
+              >
+                <h2>CASE1: 360 VR</h2>
+              </a>
+            </div>
+            <div style={{ width: '12%' }} />
+            <div className='jumbotron gradient' style={{ width: '44%' }}>
+              <a
+                css={css`
+                  color: #000;
+                  &:hover {
+                    color: #777;
+                  }
+                `}
+                href='http://prcmind.com/'
+              >
+                <h2>CASE 2: TIMP</h2>
+              </a>
+            </div>
+          </div>
+          <footer
+            style={{
+              width: '100%',
+              textAlign: 'center',
+              color: '#fff',
+              maring: '80px',
+              padding: '70px',
+            }}
+          >
+            © falesim
+          </footer>
         </div>
       )
     }}
