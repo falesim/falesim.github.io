@@ -26,7 +26,7 @@ const IndexPage = () => (
           <div className='jumbotron gradient'>
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
-          </div>
+          </div
           <div className='jumbotron gradient'>
             <a
               css={css`
@@ -51,7 +51,7 @@ const IndexPage = () => (
                 `}
                 href='https://www.panofuture.com/'
               >
-                <h2>CASE1: 360 VR</h2>
+                <h2>CASE 1: 360 VR</h2>
               </a>
             </div>
             <div style={{ width: '12%' }} />
