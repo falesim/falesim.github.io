@@ -2,9 +2,9 @@ name: Docusaurus deploy to gh-pages CI
 
 on:
   push:
-    branches: [master]
+    branches: [master-src]
   pull_request:
-    branches: [master]
+    branches: [master-src]
 
 jobs:
   build:
