@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "docusaurus": "1.14.4",
+    "gh-pages": "^2.2.0",
     "npm-check": "5.9.2",
     "prettier": "2.0.4"
   },
