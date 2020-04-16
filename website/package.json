@@ -3,13 +3,21 @@
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
     "build": "docusaurus-build",
+    "clean": "rm -rf build",
+    "predeploy": "npm run clean && npm run build && mkdir -p build/falesim && cp CNAME build/falesim/CNAME",
+    "deploy": "gh-pages -d build/falesim -b master",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
+    "format": "prettier --write \"^(node_modules)/**/*.{js,jsx,md,css}\"",
+    "lint": "eslint \"^(node_modules)/**/*.{js,jsx}\"",
     "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
+    "rename-version": "docusaurus-rename-version",
+    "upgrade-interative": "npm-check --update"
   },
   "devDependencies": {
-    "docusaurus": "1.14.4"
+    "docusaurus": "1.14.4",
+    "npm-check": "5.9.2",
+    "prettier": "2.0.4"
   },
   "name": "website",
   "description": "Falesim Ltd(https://falesim.com)",
