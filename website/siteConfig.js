@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: "doc1", label: "Docs"},
+    {doc: "learning-center", label: "learning"},
     {doc: "doc4", label: "API"},
     {page: "help", label: "Help"},
     {blog: true, label: "Blog"}
@@ -58,7 +58,7 @@ const siteConfig = {
     secondaryColor: "#277ABA",
     thirdColor: "#1D5C8C",
     fourthColor: "#143D5D",
-    fifthColor:"#0A1F2F"
+    fifthColor: "#0A1F2F"
   },
 
   /* Custom fonts for website */
@@ -93,7 +93,16 @@ const siteConfig = {
 
   // Open Graph and Twitter card images.
   ogImage: "img/undraw_online.svg",
-  twitterImage: "img/undraw_tweetstorm.svg"
+  twitterImage: "img/undraw_tweetstorm.svg",
+
+  // Sidebar
+  // any postive number or 'ALL' or default
+  blogSidebarCount: 5,
+  // change the sidebar title
+  blogSidebarTitle: {
+    default: "Recent posts",
+    all: "All blog posts"
+  },
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
@@ -103,11 +112,11 @@ const siteConfig = {
   // enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/falesim/falesim.github.io',
 }
 
 module.exports = siteConfig
