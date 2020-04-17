@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: "falesim", // Title for your website.
-  tagline: "A company with creative",
+  tagline: "A team with creative",
   url: "https://falesim.com", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
