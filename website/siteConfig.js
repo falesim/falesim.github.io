@@ -38,10 +38,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: "learning-center", label: "learning"},
-    {doc: "doc4", label: "API"},
-    {page: "help", label: "Help"},
-    {blog: true, label: "Blog"}
+//    {doc: "learn", label: "Learn"},
+    //    {doc: "doc4", label: "API"},
+    {blog: true, label: "Learn"},
+    {page: "help", label: "Help"}
   ],
 
   // If you have users set above, you add it here:
@@ -116,7 +116,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/falesim/falesim.github.io',
+  repoUrl: "https://github.com/falesim/falesim.github.io"
 }
 
 module.exports = siteConfig

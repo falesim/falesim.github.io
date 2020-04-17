@@ -5,7 +5,7 @@
     "previous": "Previous",
     "tagline": "A company with creative",
     "docs": {
-      "doc1": {
+      "learn": {
         "title": "Latin-ish",
         "sidebar_label": "Example Page"
       },
@@ -23,10 +23,8 @@
       }
     },
     "links": {
-      "learning": "learning",
-      "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Learn": "Learn",
+      "Help": "Help"
     },
     "categories": {
       "Docusaurus": "Docusaurus",
