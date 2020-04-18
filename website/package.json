@@ -5,7 +5,7 @@
     "build": "docusaurus-build",
     "clean": "rm -rf build",
     "predeploy": "npm run clean && npm run build && mkdir -p build/falesim.github.io && cp CNAME build/falesim.github.io:/CNAME",
-    "deploy": "gh-pages -d build/falesim -b master",
+    "deploy": "gh-pages -d build/falesim.github.io -b master",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "format": "prettier --write \"^(node_modules)/**/*.{js,jsx,md,css}\"",
