@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://falesim.com/blog</id>
+    <title>falesim Blog</title>
+    <updated>2020-04-17T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://falesim.com/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest falesim news and events.</subtitle>
+    <logo>https://falesim.com/img/favicon.ico</logo>
+    <rights>Copyright © 2020 falesim</rights>
+    <entry>
+        <title type="html"><![CDATA[First Blog]]></title>
+        <id>https://falesim.com/blog/2020/04/17/first-blog.html</id>
+        <link href="https://falesim.com/blog/2020/04/17/first-blog.html"/>
+        <updated>2020-04-17T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>This is the first version of falesim home page.</p>
+]]></summary>
+        <author>
+            <name>sspantz</name>
+            <email/>
+            <uri>https://github.com/sspantz</uri>
+        </author>
+    </entry>
+</feed>

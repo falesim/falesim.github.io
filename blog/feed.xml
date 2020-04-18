@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>falesim Blog</title>
+        <link>https://falesim.com/blog</link>
+        <description>The best place to stay up-to-date with the latest falesim news and events.</description>
+        <lastBuildDate>Fri, 17 Apr 2020 06:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>falesim Blog</title>
+            <url>https://falesim.com/img/favicon.ico</url>
+            <link>https://falesim.com/blog</link>
+        </image>
+        <copyright>Copyright © 2020 falesim</copyright>
+        <item>
+            <title><![CDATA[First Blog]]></title>
+            <link>https://falesim.com/blog/2020/04/17/first-blog.html</link>
+            <guid>https://falesim.com/blog/2020/04/17/first-blog.html</guid>
+            <pubDate>Fri, 17 Apr 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This is the first version of falesim home page.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
