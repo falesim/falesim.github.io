@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Week 7: Build a document site with docusaurus and github action · falesim</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 0. Prerequisition:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Week 7: Build a document site with docusaurus and github action · falesim"/><meta property="og:type" content="website"/><meta property="og:url" content="https://falesim.com/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action"/><meta property="og:description" content="## 0. Prerequisition:"/><meta property="og:image" content="https://falesim.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://falesim.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://falesim.com/blog/atom.xml" title="falesim Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://falesim.com/blog/feed.xml" title="falesim Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="falesim"/><h2 class="headerTitleWithLogo">falesim</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/blog/" target="_self">Learn</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action">Week 7: Build a document site with docusaurus and github action</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/04/11/introduction-virtual-dom-second-part">Week6: Introduction to Virtual DOM: second part of ReactJS serius</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/28/readability-of-javascript-part-one">Week4: Readability of Javascript --- Part One: Naming</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action">Week 7: Build a document site with docusaurus and github action</a></h1><p class="post-meta">April 18, 2020</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/sspantz" target="_blank" rel="noreferrer noopener">sspantz</a></p></div></header><div><span><h2><a class="anchor" aria-hidden="true" id="0-prerequisition"></a><a href="#0-prerequisition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Prerequisition:</h2>
+<ul>
+<li>npm and node</li>
+<li>json</li>
+<li>javascript</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="1-docusaurus"></a><a href="#1-docusaurus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Docusaurus</h2>
+<h3><a class="anchor" aria-hidden="true" id="i-what-is-docusaurus"></a><a href="#i-what-is-docusaurus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>i. What is Docusaurus?</h3>
+<p><a href="https://docusaurus.io/">Docusaurus</a></p>
+<p>Please visit <a href="https://docusaurus.io/docs/en/installation">https://docusaurus.io/docs/en/installation</a> and follow the instructions to get started.</p>
+<!--truncate-->
+<blockquote>
+<p>Follow along the instruction of Getting Started and continue reading this post.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="ii-you-already-in-development"></a><a href="#ii-you-already-in-development" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ii. You already in development?</h3>
+<p>Try to add a blog or edit something to play.</p>
+<blockquote>
+<p>look up the <code>blog</code>, <code>pages</code> directories and the <code>siteConfig.js</code></p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="iii-roll-up-with-packagejson"></a><a href="#iii-roll-up-with-packagejson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>iii. Roll up with <code>package.json</code></h3>
+<p>Basic intro to <code>npm script</code></p>
+<ul>
+<li>format</li>
+<li>dev</li>
+<li>clean</li>
+<li>build</li>
+<li>publish</li>
+<li>deploy: <code>gh-pages</code> package</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="iv-manually-deployment-with-npm-script"></a><a href="#iv-manually-deployment-with-npm-script" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>iv. Manually Deployment with npm script</h3>
+<p>two steps:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># build the project</span>
+npm run build
+<span class="hljs-comment"># deploy to gh-pages</span>
+npm run publish
+</code></pre>
+<p>one step:</p>
+<pre><code class="hljs css language-bash">npm run deploy
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="2-github-and-github-actions"></a><a href="#2-github-and-github-actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Github and Github Actions</h2>
+<h3><a class="anchor" aria-hidden="true" id="i-put-it-on-github"></a><a href="#i-put-it-on-github" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>i. Put it on github</h3>
+<ul>
+<li>git init the project</li>
+<li>visit <a href="https://github.com/new">https://github.com/new</a> to create a new repository</li>
+<li>put on github</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="ii-glimpse-github-action"></a><a href="#ii-glimpse-github-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ii. Glimpse github action</h3>
+<p>GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.</p>
+<blockquote>
+<p>visit <a href="https://github.com/features/actions">here</a> to get more</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="iii-cicd-with-github-action"></a><a href="#iii-cicd-with-github-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>iii. CI/CD with github action</h3>
+<p>What is CI/CD?
+visit <a href="https://rancher.com/blog/2018/2018-11-14-what-is-cicd/">here</a> to get more</p>
+<p>go to your repo, and select <code>Actions</code> to try githu actions</p>
+<h3><a class="anchor" aria-hidden="true" id="iv-secrets-on-github"></a><a href="#iv-secrets-on-github" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>iv. Secrets on github</h3>
+<p>Settings -&gt; Secrets to set environment variables to help ci/cd</p>
+<h3><a class="anchor" aria-hidden="true" id="v-all-settle-done-your-fist-cicd-script"></a><a href="#v-all-settle-done-your-fist-cicd-script" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>v. All settle done: Your fist CI/CD script</h3>
+<p>the final script may like this:</p>
+<pre><code class="hljs css language-script">
+<span class="hljs-attribute">name</span>: Docusaurus deploy to gh-pages CI
+
+<span class="yaml"><span class="hljs-attr">on:</span>
+  <span class="hljs-attr">push:</span>
+    <span class="hljs-attr">branches:</span> <span class="hljs-string">[master]</span>
+  <span class="hljs-attr">pull_request:</span>
+    <span class="hljs-attr">branches:</span> <span class="hljs-string">[master]</span>
+
+<span class="hljs-attr">jobs:</span>
+  <span class="hljs-attr">build:</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
+
+    <span class="hljs-attr">env:</span>
+      <span class="hljs-attr">working-directory:</span> <span class="hljs-string">website</span>
+
+    <span class="hljs-attr">strategy:</span>
+      <span class="hljs-attr">matrix:</span>
+        <span class="hljs-attr">node-version:</span> <span class="hljs-string">[12.x]</span>
+
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v2</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Use</span> <span class="hljs-string">Node.js</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.node-version</span> <span class="hljs-string">}}</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v1</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">node-version:</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.node-version</span> <span class="hljs-string">}}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Packages</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span>
+        <span class="hljs-attr">working-directory:</span> <span class="hljs-string">${{env.working-directory}}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">|
+          git config --global user.email ${{ secrets.EMAIL }}
+          git config --global user.name ${{ secrets.USERNAME }}
+          git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ secrets.ORGNAME }}/${{ secrets.REPO }}.git
+          npm run predeploy
+</span>        <span class="hljs-attr">working-directory:</span> <span class="hljs-string">${{env.working-directory}}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span> <span class="hljs-string">to</span> <span class="hljs-string">gh-pages</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">run</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--if-present</span>
+        <span class="hljs-attr">working-directory:</span> <span class="hljs-string">${{env.working-directory}}</span>
+        <span class="hljs-attr">env:</span>
+          <span class="hljs-attr">CI:</span> <span class="hljs-literal">true</span>
+</span></code></pre>
+<ul>
+<li>To make a change on the project</li>
+<li>commit it</li>
+<li>push the change to github, and the new website will be available in seconds to minutes.</li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog/">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#0-prerequisition">0. Prerequisition:</a></li><li><a href="#1-docusaurus">1. Docusaurus</a><ul class="toc-headings"><li><a href="#i-what-is-docusaurus">i. What is Docusaurus?</a></li><li><a href="#ii-you-already-in-development">ii. You already in development?</a></li><li><a href="#iii-roll-up-with-packagejson">iii. Roll up with <code>package.json</code></a></li><li><a href="#iv-manually-deployment-with-npm-script">iv. Manually Deployment with npm script</a></li></ul></li><li><a href="#2-github-and-github-actions">2. Github and Github Actions</a><ul class="toc-headings"><li><a href="#i-put-it-on-github">i. Put it on github</a></li><li><a href="#ii-glimpse-github-action">ii. Glimpse github action</a></li><li><a href="#iii-cicd-with-github-action">iii. CI/CD with github action</a></li><li><a href="#iv-secrets-on-github">iv. Secrets on github</a></li><li><a href="#v-all-settle-done-your-fist-cicd-script">v. All settle done: Your fist CI/CD script</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="falesim" width="66" height="58"/></a><div><h5>Map</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/falesim/falesim.github.io">GitHub</a><a class="github-button" href="https://github.com/falesim/falesim.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 falesim</section></footer></div></body></html>
