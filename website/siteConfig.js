@@ -105,7 +105,7 @@ const siteConfig = {
 
   // Sidebar
   // any postive number or 'ALL' or default
-  blogSidebarCount: 5,
+  blogSidebarCount: 'ALL',
   // change the sidebar title
   blogSidebarTitle: {
     default: "Recent posts",
