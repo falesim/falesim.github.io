@@ -1,5 +1,5 @@
 ---
-title: Week6: introduction to Virtual DOM: second part of ReactJS serius
+title: Week6: Introduction to Virtual DOM: second part of ReactJS serius
 author: cty
 authorURL: htts://github.com/Mr-taiyan
 ---

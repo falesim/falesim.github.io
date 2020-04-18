@@ -1,5 +1,5 @@
 ---
-title: Week3: introduction to react: first part of ReactJS series
+title: Week3: Introduction to React: first part of ReactJS series
 author: cty
 authorURL: https://github.com/Mr-taiyan
 ---

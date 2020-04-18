@@ -1,5 +1,5 @@
 ---
-title: Week2: 合同结构
+title: Week2: Contract Structure
 author: dennyxi
 authorURL: https://github.com/dennyxi
 ---
