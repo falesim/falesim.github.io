@@ -37,8 +37,11 @@ const siteConfig = {
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
+  // CNAME
+  cname: "falesim.com",
+
   // Used for publishing and more
-  projectName: "falesim.github.io",
+  projectName: "falesim",
   organizationName: "falesim",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
