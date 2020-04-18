@@ -2,18 +2,133 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://falesim.com/blog</id>
     <title>falesim Blog</title>
-    <updated>2020-04-17T06:00:00.000Z</updated>
+    <updated>2020-04-11T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://falesim.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest falesim news and events.</subtitle>
     <logo>https://falesim.com/img/favicon.ico</logo>
     <rights>Copyright © 2020 falesim</rights>
     <entry>
-        <title type="html"><![CDATA[First Blog]]></title>
-        <id>https://falesim.com/blog/2020/04/17/first-blog.html</id>
-        <link href="https://falesim.com/blog/2020/04/17/first-blog.html"/>
-        <updated>2020-04-17T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>This is the first version of falesim home page.</p>
+        <title type="html"><![CDATA[Week6: Introduction to Virtual DOM: second part of ReactJS serius]]></title>
+        <id>https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html</id>
+        <link href="https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html"/>
+        <updated>2020-04-11T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-review-in-brief-what-is-react-and-why-is-react-"></a><a href="#0-review-in-brief-what-is-react-and-why-is-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Review in brief: what is react and why is react ?</h2>
+<h4><a class="anchor" aria-hidden="true" id="keywords"></a><a href="#keywords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>keywords:</h4>
+<ul>
+<li>encapsulated components</li>
+<li>state management</li>
+<li>render after update</li>
+<li>better performance on updating DOM</li>
+<li>friendly api</li>
+<li>in javascript</li>
+</ul>
+]]></summary>
+        <author>
+            <name>cty</name>
+            <email/>
+            <uri>htts://github.com/Mr-taiyan</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Week5: Creative Commons]]></title>
+        <id>https://falesim.com/blog/2020/04/04/creative-commons.html</id>
+        <link href="https://falesim.com/blog/2020/04/04/creative-commons.html"/>
+        <updated>2020-04-04T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h4><a class="anchor" aria-hidden="true" id="chapter-1-知识共享定义"></a><a href="#chapter-1-知识共享定义" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 知识共享定义</h4>
+<hr>
+<p>知识共享（英语：Creative Commons）:
+<em>主要宗旨是使得著作物能更广为流通与改作，可使其他人据以创作及共享，并以所提供的许可方式确保上述理念。</em>
+<a href="https://creativecommons.org/licenses/by/2.0/legalcode">CC协议</a></p>
+<p>Q &amp; A:</p>
+<ul>
+<li>知道&quot;copyright&quot;?&quot;copyleft&quot;?</li>
+<li>你觉得它是著作权的哪种类型？“保留所有权利”？“不保留任何权利”？“还是....”?</li>
+</ul>
+]]></summary>
+        <author>
+            <name>dennyxi</name>
+            <email/>
+            <uri>https://github.com/dennyxi</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Week4: Readability of Javascript --- Part One: Naming]]></title>
+        <id>https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html</id>
+        <link href="https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html"/>
+        <updated>2020-03-28T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h4><a class="anchor" aria-hidden="true" id="chapter-1-代码应当易于理解"></a><a href="#chapter-1-代码应当易于理解" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 代码应当易于理解</h4>
+<hr>
+<p>可读性基本定理:
+<em>代码的写法应当使别人理解它所需的时间最小化</em></p>
+<p>Q &amp; A:</p>
+<ul>
+<li>代码越小越好吗?</li>
+<li>影响理解代码的时间的因素有哪些?</li>
+<li>换位思考</li>
+</ul>
+]]></summary>
+        <author>
+            <name>sspantz</name>
+            <email/>
+            <uri>https://github.com/sspantz</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Week3: Introduction to React: first part of ReactJS series]]></title>
+        <id>https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html</id>
+        <link href="https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html"/>
+        <updated>2020-03-21T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-prerequisites"></a><a href="#0-prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. prerequisites</h2>
+<ul>
+<li>javascript</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="1-whats-the-react-"></a><a href="#1-whats-the-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. what's the react ?</h2>
+<blockquote>
+<p>React makes it painless to create <strong><em>interactive UIs</em></strong>. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+</blockquote>
+<blockquote>
+<p>Build <strong><em>encapsulated components</em></strong> that manage their own state, then compose them to make complex UIs.</p>
+</blockquote>
+]]></summary>
+        <author>
+            <name>cty</name>
+            <email/>
+            <uri>https://github.com/Mr-taiyan</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Week2: Contract Structure]]></title>
+        <id>https://falesim.com/blog/2020/03/14/contract-structure.html</id>
+        <link href="https://falesim.com/blog/2020/03/14/contract-structure.html"/>
+        <updated>2020-03-14T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h1><a class="anchor" aria-hidden="true" id="合同结构"></a><a href="#合同结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>合同结构</strong></h1>
+<h3><a class="anchor" aria-hidden="true" id="_合同需要协助的人员_"></a><a href="#_合同需要协助的人员_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>合同需要协助的人员</em></h3>
+<p><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/hetong.PNG" alt="合同配合图"></p>
+<ol>
+<li>产品UI：负责将网站的UI设计内容写一份清单</li>
+<li>前端设计： 负责将网站上所有有关前端设置到的内容写一份清单</li>
+<li>后端设计： 负责将网站上有关后端设计的内容写一份清单</li>
+<li>运维： 运维范围和维护内容</li>
+<li>合同的总定价是双方商讨后的结果，销售部在细分每一项的单价</li>
+<li>最后的验收产品，主要给甲方检查相关要求部分是否达到要求，甲方签收了，证明合同上的义务已经达成了，除了运维部分还需要执行，之后出现要求更改就需要重新制定新的合同，小改动还是可以帮忙更改的。</li>
+</ol>
+]]></summary>
+        <author>
+            <name>dennyxi</name>
+            <email/>
+            <uri>https://github.com/dennyxi</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Week 1: A Brief Introduction to Array in Javascript]]></title>
+        <id>https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</id>
+        <link href="https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html"/>
+        <updated>2020-03-07T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h4><a class="anchor" aria-hidden="true" id="0-pre-requisites"></a><a href="#0-pre-requisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Pre-requisites</h4>
+<ul>
+<li>basic javascript</li>
+</ul>
 ]]></summary>
         <author>
             <name>sspantz</name>

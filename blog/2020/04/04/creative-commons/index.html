@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Week5: Creative Commons · falesim</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="#### Chapter 1: 知识共享定义"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Week5: Creative Commons · falesim"/><meta property="og:type" content="website"/><meta property="og:url" content="https://falesim.com/blog/2020/04/04/creative-commons"/><meta property="og:description" content="#### Chapter 1: 知识共享定义"/><meta property="og:image" content="https://falesim.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://falesim.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://falesim.com/blog/atom.xml" title="falesim Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://falesim.com/blog/feed.xml" title="falesim Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="falesim"/><h2 class="headerTitleWithLogo">falesim</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/blog/" target="_self">Learn</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2020/04/11/introduction-virtual-dom-second-part">Week6: Introduction to Virtual DOM: second part of ReactJS serius</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/28/readability-of-javascript-part-one">Week4: Readability of Javascript --- Part One: Naming</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></h1><p class="post-meta">April 4, 2020</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/dennyxi" target="_blank" rel="noreferrer noopener">dennyxi</a></p></div></header><div><span><h4><a class="anchor" aria-hidden="true" id="chapter-1-知识共享定义"></a><a href="#chapter-1-知识共享定义" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 知识共享定义</h4>
+<hr>
+<p>知识共享（英语：Creative Commons）:
+<em>主要宗旨是使得著作物能更广为流通与改作，可使其他人据以创作及共享，并以所提供的许可方式确保上述理念。</em>
+<a href="https://creativecommons.org/licenses/by/2.0/legalcode">CC协议</a></p>
+<p>Q &amp; A:</p>
+<ul>
+<li>知道&quot;copyright&quot;?&quot;copyleft&quot;?</li>
+<li>你觉得它是著作权的哪种类型？“保留所有权利”？“不保留任何权利”？“还是....”?</li>
+</ul>
+<!--truncate-->
+<h4><a class="anchor" aria-hidden="true" id="chapter-2-协议"></a><a href="#chapter-2-协议" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 2: 协议</h4>
+<hr>
+<p>四种核心权利，六种常见组合
+-Creative Commons（知识共享）是一个相对宽松的版权协议。它只保留了几种权利（some rights reserved）。使用者可以明确知道所有者的权利，不容易侵犯对方的版权，作品可以得到有效传播。</p>
+<p>作为作者，你可以选择以下1~4种权利组合:</p>
+<ul>
+<li>署名（Attribution，简写为BY）：必须提到原作者。</li>
+<li>非商业用途（Noncommercial，简写为NC）：不得用于盈利性目的。</li>
+<li>禁止演绎（No Derivative Works，简写为ND）：不得修改原作品, 不得再创作。</li>
+<li>相同方式共享（Share Alike，简写为SA）：允许修改原作品，但必须使用相同的许可证发布。</li>
+</ul>
+<p>知识共享协议允许作者选择不同的授权条款和根据不同国家的著作权法制定的版权协议，版权持有人可以指定以下的条件（详见下图）：</p>
+<ul>
+<li><p>在没有指定“nc”的情况下，将授权对本作品进行商业利用；</p></li>
+<li><p>在没有指定“nd”的情况下，将授权创作衍生作品。</p>
+<table>
+<thead>
+<tr><th>标志</th><th>英文</th><th>缩写</th><th>全称</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/60px-Cc-by_new_white.svg.png" alt=""></td><td>Attribution</td><td>BY</td><td>署名</td><td>你可以自由复制、散布、展示及演出本作品；您必须按照作者或授权人所指定的方式，保留其姓名标示</td></tr>
+<tr><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/Cc-nc_white.svg.png" alt=""></td><td>NonCommercial</td><td>NC</td><td>非商业性使用</td><td>您可以自由复制、散布展示及演出本作品；您不得为商业目的而使用本作品</td></tr>
+<tr><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/60px-Cc-nd_white.svg.png" alt=""></td><td>NoDerivs</td><td>ND</td><td>禁止演绎</td><td>您可以自由复制、散布、展示及演出本作品；您不得改变、转变或作本作品</td></tr>
+<tr><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/60px-Cc-sa_white.svg.png" alt=""></td><td>ShareAlike</td><td>SA</td><td>相同方式共享</td><td>您可以自由复制、散布、展示及演出本作品；若您改变、转变或作本作品，仅在遵守与本著作相同的授权条款下，您才能散布有本作品产生的衍生作品。</td></tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>这些不同条件共有16种组合模式，其中4种组合由于同时包括互相排斥的“nd”和“sa”而无效；1种没有以上任何条件的协议，它相当于公有领域。在CC 2.0以上的版本，又有5种没有署名条款的协议被列为淘汰，因为98%的授权者都要求署名。</p>
+<ul>
+<li><p>简化后剩下6种协议组合（详见下图）：</p>
+<table>
+<thead>
+<tr><th>许可证协议</th><th>有效组合</th></tr>
+</thead>
+<tbody>
+<tr><td>署名标示（BY）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/160px-CC-BY.svg.png" alt=""></td></tr>
+<tr><td>署名标示（BY）-相同方式共享（SA）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/Cc-by-sa_(1).svg.png" alt=""></td></tr>
+<tr><td>署名标示（BY）-禁止演绎（ND）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/160px-CC-BY-ND.svg.png" alt=""></td></tr>
+<tr><td>署名标示（BY）-非商业性（NC）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/160px-CC-BY-NC.svg.png" alt=""></td></tr>
+<tr><td>署名标示（BY）-非商业性（NC）-相同方式共享（SA）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/160px-CC-BY-NC-SA.svg.png" alt=""></td></tr>
+<tr><td>署名标示（BY）-非商业性（NC）-禁止演绎（ND）</td><td><img src="https://raw.githubusercontent.com/dennyxi/learning-center/master/lessons/images/160px-CC-BY-NC-ND.svg.png" alt=""></td></tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="chapter-3-可用于cc0的网站"></a><a href="#chapter-3-可用于cc0的网站" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 3: 可用于cc0的网站</h4>
+<hr>
+<ul>
+<li>图片和icon</li>
+<li><a href="https://cc0.wfublog.com/?">CC0 免費圖庫搜尋引擎</a></li>
+<li><a href="https://www.iconfont.cn/">阿里巴巴矢量图标</a></li>
+<li><a href="https://www.freepik.com/">freepik</a></li>
+<li><a href="https://librestock.com/">LibreStock</a></li>
+<li><a href="https://www.flaticon.com/">Flaticon</a></li>
+<li>音乐</li>
+<li><a href="https://freesound.org/browse/tags/music/">freesound</a></li>
+<li><a href="https://www.youtube.com/">youtube</a></li>
+</ul>
+<hr>
+<p>Q &amp; A:</p>
+<ul>
+<li>google 搜索的坑</li>
+<li>中文免费图片的坑</li>
+</ul>
+<hr>
+<p>-为了避免不必要的麻烦，还是要在图片上注明非商用，或者仅供设计用途的水印</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog/">Recent posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="falesim" width="66" height="58"/></a><div><h5>Map</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/falesim/falesim">GitHub</a><a class="github-button" href="https://github.com/falesim/falesim.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 falesim</section></footer></div></body></html>

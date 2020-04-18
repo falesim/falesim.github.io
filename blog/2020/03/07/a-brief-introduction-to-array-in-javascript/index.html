@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Week 1: A Brief Introduction to Array in Javascript · falesim</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="#### 0. Pre-requisites"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Week 1: A Brief Introduction to Array in Javascript · falesim"/><meta property="og:type" content="website"/><meta property="og:url" content="https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript"/><meta property="og:description" content="#### 0. Pre-requisites"/><meta property="og:image" content="https://falesim.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://falesim.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://falesim.com/blog/atom.xml" title="falesim Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://falesim.com/blog/feed.xml" title="falesim Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="falesim"/><h2 class="headerTitleWithLogo">falesim</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/blog/" target="_self">Learn</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2020/04/11/introduction-virtual-dom-second-part">Week6: Introduction to Virtual DOM: second part of ReactJS serius</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/28/readability-of-javascript-part-one">Week4: Readability of Javascript --- Part One: Naming</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></h1><p class="post-meta">March 7, 2020</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/sspantz" target="_blank" rel="noreferrer noopener">sspantz</a></p></div></header><div><span><h4><a class="anchor" aria-hidden="true" id="0-pre-requisites"></a><a href="#0-pre-requisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Pre-requisites</h4>
+<ul>
+<li>basic javascript</li>
+</ul>
+<!--truncate-->
+<h4><a class="anchor" aria-hidden="true" id="1-creating-array"></a><a href="#1-creating-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Creating Array</h4>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// creating array with []</span>
+<span class="hljs-keyword">var</span> empty = [] <span class="hljs-comment">// create an empty array</span>
+<span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>] <span class="hljs-comment">// create an array with 5 elements</span>
+<span class="hljs-keyword">var</span> values = [<span class="hljs-literal">true</span>, <span class="hljs-string">'test'</span>, <span class="hljs-number">0</span>] <span class="hljs-comment">// create an array with 3 elements of differnet types</span>
+<span class="hljs-keyword">var</span> operation = [<span class="hljs-number">1</span> - <span class="hljs-number">1</span>, <span class="hljs-string">'s'</span> + []] <span class="hljs-comment">// create an array with element which can be an expression</span>
+<span class="hljs-keyword">var</span> undef = [<span class="hljs-number">1</span>, , , <span class="hljs-number">4</span>] <span class="hljs-comment">// create an array with empty element</span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// creating array using Array constructor</span>
+<span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>() <span class="hljs-comment">// create an empty array using constructor function</span>
+<span class="hljs-keyword">var</span> b = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">10</span>) <span class="hljs-comment">// create an array with 10 empty element using constructor function</span>
+<span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-string">'test'</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">3</span> / <span class="hljs-number">10</span>) <span class="hljs-comment">// create an array with element which can be an expression using constructor function</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="2-read-and-write"></a><a href="#2-read-and-write" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Read and Write</h4>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+a[<span class="hljs-number">0</span>] <span class="hljs-comment">// read</span>
+a[<span class="hljs-number">1</span>] = <span class="hljs-number">3</span> <span class="hljs-comment">// write</span>
+a.length <span class="hljs-comment">// length of an array</span>
+a[<span class="hljs-number">4</span>] <span class="hljs-comment">// undefined, it does not throw an error or do anything else, just return 'undefined'</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="3-sparse-array"></a><a href="#3-sparse-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Sparse Array</h4>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">5</span>) <span class="hljs-comment">// no element, a.length is 5</span>
+a = [] <span class="hljs-comment">// a.length is 0;</span>
+a[<span class="hljs-number">1000</span>] = <span class="hljs-number">0</span> <span class="hljs-comment">// a.length is 1001</span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> a1 = [,] <span class="hljs-comment">// no element, a.length is 1</span>
+<span class="hljs-keyword">var</span> a2 = [<span class="hljs-literal">undefined</span>] <span class="hljs-comment">// undefined as an element</span>
+<span class="hljs-number">0</span> <span class="hljs-keyword">in</span> a1 <span class="hljs-comment">// false, no element at index 0</span>
+<span class="hljs-number">0</span> <span class="hljs-keyword">in</span> a2 <span class="hljs-comment">// true, there is an element 'undefined' at index 0</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="4-length"></a><a href="#4-length" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Length</h4>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+a.length <span class="hljs-comment">// 5</span>
+a.length = <span class="hljs-number">3</span> <span class="hljs-comment">// shortend array a to [1, 2, 3]</span>
+a.length = <span class="hljs-number">0</span> <span class="hljs-comment">// []</span>
+a.length = <span class="hljs-number">5</span> <span class="hljs-comment">// { length: 5 }</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="5-add-and-delete"></a><a href="#5-add-and-delete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Add and Delete</h4>
+<pre><code class="hljs css language-js">a = []
+a[<span class="hljs-number">0</span>] = <span class="hljs-string">'zero'</span>
+a[<span class="hljs-number">1</span>] = <span class="hljs-string">'one'</span>
+a.push(<span class="hljs-string">'two'</span>)
+<span class="hljs-keyword">delete</span> a[<span class="hljs-number">1</span>]
+<span class="hljs-number">1</span> <span class="hljs-keyword">in</span> a
+a.length
+a.pop()
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="6-iteration"></a><a href="#6-iteration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Iteration</h4>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> o = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+<span class="hljs-keyword">var</span> keys = <span class="hljs-built_in">Object</span>.keys(o)
+<span class="hljs-keyword">var</span> values = []
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; keys.length; i++) {
+  <span class="hljs-keyword">var</span> key = keys[i]
+  value[i] = o[key]
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = keys.length; i &lt; len; i++) {
+  <span class="hljs-comment">// run code here</span>
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; o.length; i++) {
+  <span class="hljs-keyword">if</span> (!a[i]) <span class="hljs-keyword">continue</span>
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; o.length; i++) {
+  <span class="hljs-keyword">if</span> (a[i] === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">continue</span>
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; o.length; i++) {
+  <span class="hljs-keyword">if</span> (i <span class="hljs-keyword">in</span> a) <span class="hljs-keyword">continue</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="7-multi-dimensional-array"></a><a href="#7-multi-dimensional-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Multi-dimensional Array</h4>
+<p>not mentioned this time</p>
+<h4><a class="anchor" aria-hidden="true" id="8-methods"></a><a href="#8-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Methods</h4>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// join()</span>
+
+<span class="hljs-comment">// reverse()</span>
+
+<span class="hljs-comment">// sort()</span>
+
+<span class="hljs-comment">// concat()</span>
+
+<span class="hljs-comment">// slice()</span>
+
+<span class="hljs-comment">// splice()</span>
+
+<span class="hljs-comment">// push() &amp; pop()</span>
+
+<span class="hljs-comment">// unshift() &amp; shift()</span>
+
+<span class="hljs-comment">// toString() &amp; toLocaleString()</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="9-es5-methods"></a><a href="#9-es5-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. ES5 Methods</h4>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// forEach()</span>
+
+<span class="hljs-comment">// map()</span>
+
+<span class="hljs-comment">// filter()</span>
+
+<span class="hljs-comment">// every()</span>
+
+<span class="hljs-comment">// some()</span>
+
+<span class="hljs-comment">// reduce()</span>
+
+<span class="hljs-comment">// reduceRight()</span>
+
+<span class="hljs-comment">// indexOf()</span>
+
+<span class="hljs-comment">// lastIndexOf()</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="10-es6-methods"></a><a href="#10-es6-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. ES6+ Methods</h4>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Array.from()</span>
+
+<span class="hljs-built_in">Array</span>.from(<span class="hljs-string">'foo'</span>);
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">set</span> = new Set(['foo', 'bar', 'baz', 'foo']);
+Array.from(<span class="hljs-keyword">set</span>);
+
+
+const map = new Map([[1, 2], [2, 4], [4, 8]]);
+Array.from(map);
+
+const mapper = new Map([['1', 'a'], ['2', 'b']]);
+Array.from(mapper.values());
+
+Array.from(mapper.keys());
+
+function f() {
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>);
+}
+
+f(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+
+<span class="hljs-comment">// Using an arrow function as the map function to</span>
+<span class="hljs-comment">// manipulate the elements</span>
+<span class="hljs-built_in">Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], x =&gt; x + x);
+<span class="hljs-comment">// [2, 4, 6]</span>
+
+
+<span class="hljs-comment">// Generate a sequence of numbers</span>
+<span class="hljs-comment">// Since the array is initialized with `undefined` on each position,</span>
+<span class="hljs-comment">// the value of `v` below will be `undefined`</span>
+<span class="hljs-built_in">Array</span>.from({<span class="hljs-attr">length</span>: <span class="hljs-number">5</span>}, (v, i) =&gt; i);
+<span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
+
+Sequence generator (range)
+
+<span class="hljs-comment">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)</span>
+<span class="hljs-keyword">const</span> range = <span class="hljs-function">(<span class="hljs-params">start, stop, step</span>) =&gt;</span> <span class="hljs-built_in">Array</span>.from({ <span class="hljs-attr">length</span>: <span class="hljs-function">(<span class="hljs-params">stop - start</span>) / <span class="hljs-params">step</span> + 1}, (<span class="hljs-params">_, i</span>) =&gt;</span> start + (i * step));
+
+<span class="hljs-comment">// Generate numbers range 0..4</span>
+range(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>);
+<span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
+
+<span class="hljs-comment">// Generate numbers range 1..10 with step of 2</span>
+range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>);
+<span class="hljs-comment">// [1, 3, 5, 7, 9]</span>
+
+<span class="hljs-comment">// Generate the alphabet using Array.from making use of it being ordered as a sequence</span>
+range(<span class="hljs-string">'A'</span>.charCodeAt(<span class="hljs-number">0</span>), <span class="hljs-string">'Z'</span>.charCodeAt(<span class="hljs-number">0</span>), <span class="hljs-number">1</span>).map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-built_in">String</span>.fromCharCode(x));
+<span class="hljs-comment">// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combine</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> arr = [].concat.apply([], <span class="hljs-built_in">arguments</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(arr));
+}
+
+<span class="hljs-keyword">var</span> m = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>], n = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>];
+<span class="hljs-built_in">console</span>.log(combine(m,n));                     <span class="hljs-comment">// [1, 2, 3]</span>
+
+
+<span class="hljs-comment">// Array.of()</span>
+<span class="hljs-built_in">Array</span>.of(<span class="hljs-number">7</span>)
+<span class="hljs-built_in">Array</span>.of(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">7</span>)
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+<span class="hljs-comment">// flat()</span>
+<span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>], [<span class="hljs-number">6</span>, [<span class="hljs-number">7</span>]]]]
+<span class="hljs-keyword">var</span> b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, , , <span class="hljs-number">5</span>]
+a.flat()
+a.flat(<span class="hljs-number">2</span>)
+a.flat(<span class="hljs-literal">Infinity</span>)
+b.flat()
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="13-types-of-array"></a><a href="#13-types-of-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>13. Types of array</h4>
+<pre><code class="hljs css language-js"><span class="hljs-built_in">Array</span>.isArray([])
+<span class="hljs-built_in">Array</span>.isArray({})
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="14-array-like-object"></a><a href="#14-array-like-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>14. Array-like Object</h4>
+<p>not mentioned this time</p>
+<h4><a class="anchor" aria-hidden="true" id="15-string-as-an-array"></a><a href="#15-string-as-an-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>15. String as an Array</h4>
+<p>not mentioned this time</p>
+<h4><a class="anchor" aria-hidden="true" id="16-others"></a><a href="#16-others" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>16. Others</h4>
+<p>read &quot;oo js&quot;</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog/">Recent posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="falesim" width="66" height="58"/></a><div><h5>Map</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/falesim/falesim">GitHub</a><a class="github-button" href="https://github.com/falesim/falesim.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 falesim</section></footer></div></body></html>

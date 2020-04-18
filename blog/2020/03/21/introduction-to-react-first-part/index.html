@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Week3: Introduction to React: first part of ReactJS series · falesim</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 0. prerequisites"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Week3: Introduction to React: first part of ReactJS series · falesim"/><meta property="og:type" content="website"/><meta property="og:url" content="https://falesim.com/blog/2020/03/21/introduction-to-react-first-part"/><meta property="og:description" content="## 0. prerequisites"/><meta property="og:image" content="https://falesim.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://falesim.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://falesim.com/blog/atom.xml" title="falesim Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://falesim.com/blog/feed.xml" title="falesim Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="falesim"/><h2 class="headerTitleWithLogo">falesim</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/blog/" target="_self">Learn</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2020/04/11/introduction-virtual-dom-second-part">Week6: Introduction to Virtual DOM: second part of ReactJS serius</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/28/readability-of-javascript-part-one">Week4: Readability of Javascript --- Part One: Naming</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></h1><p class="post-meta">March 21, 2020</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/Mr-taiyan" target="_blank" rel="noreferrer noopener">cty</a></p></div></header><div><span><h2><a class="anchor" aria-hidden="true" id="0-prerequisites"></a><a href="#0-prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. prerequisites</h2>
+<ul>
+<li>javascript</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="1-whats-the-react-"></a><a href="#1-whats-the-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. what's the react ?</h2>
+<blockquote>
+<p>React makes it painless to create <strong><em>interactive UIs</em></strong>. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+</blockquote>
+<blockquote>
+<p>Build <strong><em>encapsulated components</em></strong> that manage their own state, then compose them to make complex UIs.</p>
+</blockquote>
+<!--truncate-->
+<pre><code class="hljs css language-text">in general, React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-why-react-"></a><a href="#2-why-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. why react ?</h2>
+<ul>
+<li><p>better performance compared to those that use other frameworks. Because ReactJS helps to prevent updating of DOM, ReactJS was designed to help improve the total rendered pages from the website server.</p></li>
+<li><p>Working with the DOM API is hard. React basically gives developers the ability to work with a virtual browser that is more friendly than the real browser. React’s virtual browser acts like an agent between the developer and the real browser.</p></li>
+<li><p>React is just JavaScript, there is a very small API to learn, just a few functions and how to use them. After that, your JavaScript skills are what make you a better React developer.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3-principle-of-react-"></a><a href="#3-principle-of-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. principle of react ?</h2>
+<ol>
+<li>what I know
+<ol>
+<li>Virtual DOM model</li>
+<li>Life cycle management</li>
+<li>setState machanism</li>
+<li>diff algorithm</li>
+<li>one-way data flow</li>
+</ol></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="virtual-dom-model"></a><a href="#virtual-dom-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Virtual DOM model</h4>
+<blockquote>
+<p>Virtual DOM is actually an abstraction of real DOM, a JS object. React all surface operations are actually virtual DOM operations.</p>
+</blockquote>
+<p><img src="https://imgs.developpaper.com/imgs/1613141974-5da55fd1d0911_articlex.png" alt="virtual Dom"></p>
+<h4><a class="anchor" aria-hidden="true" id="life-cycle-management"></a><a href="#life-cycle-management" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Life cycle management</h4>
+<ul>
+<li>Mounting</li>
+<li>Updating</li>
+<li>Unmounting</li>
+</ul>
+<p><img src="https://imgs.developpaper.com/imgs/3858602572-5da6e613d3cf2_articlex.png" alt="picture"></p>
+<h4><a class="anchor" aria-hidden="true" id="setstate-mechanism"></a><a href="#setstate-mechanism" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setstate mechanism</h4>
+<pre><code class="hljs css language-jsx">setState(updater[, callback])
+</code></pre>
+<blockquote>
+<p>We know that react’s state management usesimmutableConceptual design, so when you want to change the state value, you can’t use the traditional assignment methodthis.state.counter = 1To modify, you need to callsetState(updater[, callback])Method of modification.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="diff-algorithm"></a><a href="#diff-algorithm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Diff algorithm</h4>
+<blockquote>
+<p>DiffThe algorithm is used to calculate the difference between two virtual DOMS, which is the most expensive part of react.</p>
+</blockquote>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog/">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#0-prerequisites">0. prerequisites</a></li><li><a href="#1-whats-the-react-">1. what's the react ?</a></li><li><a href="#2-why-react-">2. why react ?</a></li><li><a href="#3-principle-of-react-">3. principle of react ?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="falesim" width="66" height="58"/></a><div><h5>Map</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/falesim/falesim">GitHub</a><a class="github-button" href="https://github.com/falesim/falesim.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 falesim</section></footer></div></body></html>

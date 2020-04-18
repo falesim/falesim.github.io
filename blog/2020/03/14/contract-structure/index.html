@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Week2: Contract Structure · falesim</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# **合同结构**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Week2: Contract Structure · falesim"/><meta property="og:type" content="website"/><meta property="og:url" content="https://falesim.com/blog/2020/03/14/contract-structure"/><meta property="og:description" content="# **合同结构**"/><meta property="og:image" content="https://falesim.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://falesim.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://falesim.com/blog/atom.xml" title="falesim Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://falesim.com/blog/feed.xml" title="falesim Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="falesim"/><h2 class="headerTitleWithLogo">falesim</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/blog/" target="_self">Learn</a></li><li class=""><a href="/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2020/04/11/introduction-virtual-dom-second-part">Week6: Introduction to Virtual DOM: second part of ReactJS serius</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/04/04/creative-commons">Week5: Creative Commons</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/28/readability-of-javascript-part-one">Week4: Readability of Javascript --- Part One: Naming</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/21/introduction-to-react-first-part">Week3: Introduction to React: first part of ReactJS series</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/03/07/a-brief-introduction-to-array-in-javascript">Week 1: A Brief Introduction to Array in Javascript</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2020/03/14/contract-structure">Week2: Contract Structure</a></h1><p class="post-meta">March 14, 2020</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/dennyxi" target="_blank" rel="noreferrer noopener">dennyxi</a></p></div></header><div><span><h1><a class="anchor" aria-hidden="true" id="合同结构"></a><a href="#合同结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>合同结构</strong></h1>
+<h3><a class="anchor" aria-hidden="true" id="_合同需要协助的人员_"></a><a href="#_合同需要协助的人员_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>合同需要协助的人员</em></h3>
+<p><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/hetong.PNG" alt="合同配合图"></p>
+<ol>
+<li>产品UI：负责将网站的UI设计内容写一份清单</li>
+<li>前端设计： 负责将网站上所有有关前端设置到的内容写一份清单</li>
+<li>后端设计： 负责将网站上有关后端设计的内容写一份清单</li>
+<li>运维： 运维范围和维护内容</li>
+<li>合同的总定价是双方商讨后的结果，销售部在细分每一项的单价</li>
+<li>最后的验收产品，主要给甲方检查相关要求部分是否达到要求，甲方签收了，证明合同上的义务已经达成了，除了运维部分还需要执行，之后出现要求更改就需要重新制定新的合同，小改动还是可以帮忙更改的。</li>
+</ol>
+<!--truncate-->
+<h2><a class="anchor" aria-hidden="true" id="_一般合同结构_"></a><a href="#_一般合同结构_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>一般合同结构</em></h2>
+<ol>
+<li><p>项目内容</p>
+<ol>
+<li><p>内容名称</p>
+<ul>
+<li>每一项名称（如：网站建设，运维，响应式等），给双方知道到底要做什么内容，乙方需要达到什么效果。</li>
+<li><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同1.PNG" alt="合同配合图"></li>
+</ul></li>
+<li><p>内容介绍</p>
+<ul>
+<li>每一项静态功能的介绍（如：首页有产品目录，转入注册和登录页面，各类产品分类，和推荐产品），每一页包含什么内容和有什么功能；</li>
+<li>每一项动态功能介绍（如：首页出现最新的新闻栏，可以循环滚动，有轮播图），
+每一页包含什么动态内容和功能；</li>
+<li>每一项功能实现到什么效果（如：轮播图可以滚动多张大图，点击圆点可以看到图片）</li>
+<li><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同3.PNG" alt="合同配合图"></li>
+</ul></li>
+<li><p>项目的单价</p>
+<ul>
+<li>每一大项的价格要表明</li>
+<li>还要一个合计总数</li>
+<li><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同4.PNG" alt="合同配合图"></li>
+</ul></li>
+</ol></li>
+<li><p>项目合同金额</p>
+<ul>
+<li>合同的金额要大小写</li>
+<li>还需要合同签订后先要求预支付百分几的定金，在完成后多少天内支付剩下的部分</li>
+<li><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同2.PNG" alt="合同配合图"></li>
+</ul></li>
+<li><p>付款方式</p>
+<ul>
+<li>现金</li>
+<li>转账方式</li>
+<li>需要填写双方的汇款信息（公司银行账户，什么银行，银行账号）</li>
+<li>支票</li>
+<li>是否需要缴纳税款</li>
+<li><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同5.PNG" alt="合同配合图"></li>
+</ul></li>
+<li><p>验收方式</p>
+<ul>
+<li><p>甲方可以通过任何与因特网进行网络连接的计算机浏览自己的主页。</p></li>
+<li><p>主页无文字拼写及图片（以甲方提供的材料为标准）错误。</p></li>
+<li><p>验收合格，甲方以书面方式签收。</p></li>
+<li><p>验收合格后，如果甲方需要修改功能及主页，改动在不违背主页风格和系统分析的前提下，一个月内乙方予以修改；改动要求对程序开发要求增加较大，须另交开发制作费，具体收费标准双方协商后确定。</p></li>
+<li><p><img src="https://raw.githubusercontent.com/falesim/learning-center/master/lessons/images/合同6.PNG" alt="合同配合图"></p></li>
+</ul></li>
+<li><p>违约责任</p>
+<ul>
+<li>约束不合理的行为（如租房不能够在不允许的情况下转租给其他人）</li>
+<li>针对一些不可抗力因素</li>
+<li>甲方违约，乙方有权利不退还定金</li>
+<li>乙方没有按时完成项目，乙方也要自行承担责任</li>
+</ul></li>
+<li><p>保密</p>
+<ul>
+<li>双方保证对从另一方取得且无法自公开渠道获得的商业秘密（技术信息、经营信息及其他商业秘密）予以保密。未经该商业秘密的原提供方同意，一方不得向任何第三方泄露该商业秘密的全部或部分内容。但法律、法规另有规定或双方另有约定的除外。</li>
+</ul></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="_非一般合同结构_"></a><a href="#_非一般合同结构_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>非一般合同结构</em></h2>
+<pre><code class="hljs css language-text">指甲方指定合同内容的规格和样式或者由甲方出合同。
+可以说所有事项都是甲方来定。
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="_彩蛋_"></a><a href="#_彩蛋_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>彩蛋</em></h2>
+<h4><a class="anchor" aria-hidden="true" id="投标的标书结构"></a><a href="#投标的标书结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>投标的标书结构</h4>
+<ol>
+<li>介绍公司
+<ol>
+<li>是一家什么类型的公司</li>
+<li>添加营业执照</li>
+<li>银行账户</li>
+</ol></li>
+<li>公司的实力
+<ol>
+<li>做过什么项目</li>
+<li>是否有专利，软著（要与这个项目有关的信息）</li>
+<li>是否有成功的案例</li>
+</ol></li>
+<li>做这个项目的人员
+<ol>
+<li>将人员资料写上去（牛逼的人员信息写进去，人员获得过什么职称也要，还有证件）</li>
+<li>有多少个人制作这个项目</li>
+</ol></li>
+<li>项目产品的技术说明
+<ol>
+<li>图纸设计</li>
+<li>技术参数</li>
+<li>产品配置</li>
+<li>技术偏离表
+<ol>
+<li>甲方公司给出的要求，与乙方公司的要求是否一致</li>
+<li>乙方公司添加功能也可以加分</li>
+<li>甲方公司给出的要求乙方公司提供有变差会减分</li>
+</ol></li>
+</ol></li>
+<li>报价单
+<ol>
+<li>有报价总价和分项报价表</li>
+<li>大小写要相符</li>
+</ol></li>
+</ol>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog/">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#_一般合同结构_"><em>一般合同结构</em></a></li><li><a href="#_非一般合同结构_"><em>非一般合同结构</em></a></li><li><a href="#_彩蛋_"><em>彩蛋</em></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="falesim" width="66" height="58"/></a><div><h5>Map</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/falesim/falesim">GitHub</a><a class="github-button" href="https://github.com/falesim/falesim.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 falesim</section></footer></div></body></html>
