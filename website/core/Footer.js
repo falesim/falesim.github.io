@@ -159,6 +159,7 @@ class Footer extends React.Component {
           </div>
         </section>
 
+        {/*
         <a
           href="https://opensource.facebook.com/"
           target="_blank"
@@ -172,6 +173,7 @@ class Footer extends React.Component {
             height="45"
           />
         </a>
+        */}
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     )
