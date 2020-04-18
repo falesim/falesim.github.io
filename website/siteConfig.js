@@ -20,6 +20,14 @@ const users = [
   }
 ]
 
+const colors = {
+  primaryColor: "#3198e8",
+  secondaryColor: "#277ABA",
+  thirdColor: "#1D5C8C",
+  fourthColor: "#143D5D",
+  fifthColor: "#0A1F2F"
+}
+
 const siteConfig = {
   title: "falesim", // Title for your website.
   tagline: "A team with creative",
@@ -38,11 +46,14 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-//    {doc: "learn", label: "Learn"},
-    //    {doc: "doc4", label: "API"},
-    {blog: true, label: "Learn"},
+    {doc: "learn", label: "Learn"},
+    {doc: "doc4", label: "API"},
+    //    { search: true},
+    {blog: true, label: "Blog"},
     {page: "help", label: "Help"}
   ],
+
+  //  customDocsPath: "learning-center",
 
   // If you have users set above, you add it here:
   users,
@@ -53,13 +64,7 @@ const siteConfig = {
   favicon: "img/favicon.ico",
 
   /* Colors for website */
-  colors: {
-    primaryColor: "#3198e8",
-    secondaryColor: "#277ABA",
-    thirdColor: "#1D5C8C",
-    fourthColor: "#143D5D",
-    fifthColor: "#0A1F2F"
-  },
+  colors,
 
   /* Custom fonts for website */
   /*

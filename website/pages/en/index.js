@@ -60,7 +60,7 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_creative_team.svg`} />
+        <Logo img_src={`${baseUrl}img/undraw_good_team.svg`} />
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
@@ -100,10 +100,8 @@ class Index extends React.Component {
         className="productShowcaseSection paddingBottom"
         style={{textAlign: "center"}}
       >
-        {/*
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-        */}
+        <h2>Features</h2>
+        <MarkdownBlock>These are *features*:</MarkdownBlock>
       </div>
     )
 
@@ -115,7 +113,7 @@ class Index extends React.Component {
               "To make your landing page more attractive, use illustrations! Check out " +
               "[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. " +
               "The illustrations you see on this page are from unDraw.",
-            image: `${baseUrl}img/undraw_code_review.svg`,
+            image: `${baseUrl}img/undraw_design_feedback.svg`,
             imageAlign: "left",
             title: "Wonderful SVG Illustrations"
           }
@@ -128,10 +126,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              "This is another description of how this project is useful",
-            image: `${baseUrl}img/undraw_note_list.svg`,
+              "Users switch from their laptop to iPad, from iPad to mobile phone should have the same or similar user experiences.",
+            image: `${baseUrl}img/undraw_web_devices.svg`,
             imageAlign: "right",
-            title: "Description"
+            title: "Responsive Design"
           }
         ]}
       </Block>
@@ -155,16 +153,16 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: "This is the content of my feature",
-            image: `${baseUrl}img/undraw_react.svg`,
+            content: "Learning center held every Saturday.",
+            image: `${baseUrl}img/undraw_teaching.svg`,
             imageAlign: "top",
-            title: "Feature One"
+            title: "Lecturing"
           },
           {
-            content: "The content of my second feature",
-            image: `${baseUrl}img/undraw_operating_system.svg`,
+            content: "Learn from learning center.",
+            image: `${baseUrl}img/undraw_learning.svg`,
             imageAlign: "top",
-            title: "Feature Two"
+            title: "Learners"
           }
         ]}
       </Block>
@@ -203,16 +201,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          {/*
           <Features />
-          <FeatureCallout />
-          */}
+          {/*          <FeatureCallout /> */}
           <LearnHow />
-          {/*
           <TryOut />
           <Description />
           <Showcase />
-        */}
         </div>
       </div>
     )
