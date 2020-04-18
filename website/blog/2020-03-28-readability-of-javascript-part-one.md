@@ -4,7 +4,7 @@ author: sspantz
 authorURL: https://github.com/sspantz
 ---
 
-#### Chapter 1: 代码应当易于理解
+## Chapter 1: 代码应当易于理解
 
 ---
 
@@ -18,7 +18,7 @@ Q & A:
 
 <!--truncate-->
 
-#### Chapter 2: 把信息装到名字里
+## Chapter 2: 把信息装到名字里
 
 ---
 
@@ -48,7 +48,7 @@ Q & A:
   - 名字的长度
   - 名字的格式
 
-#### Chapter 3: 不会误解的名字
+## Chapter 3: 不会误解的名字
 
 ---
 
