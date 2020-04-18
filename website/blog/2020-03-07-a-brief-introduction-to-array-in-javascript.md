@@ -4,13 +4,15 @@ author: sspantz
 authorURL: https://github.com/sspantz
 ---
 
-#### 0. Pre-requisites
+# A Brief Introduction to Array in Javascript
+
+## 0. Pre-requisites
 
 - basic javascript
 
 <!--truncate-->
 
-#### 1. Creating Array
+## 1. Creating Array
 
 ```js
 // creating array with []
@@ -28,7 +30,7 @@ var b = new Array(10) // create an array with 10 empty element using constructor
 var c = new Array(4, 3, 'test', false, 3 / 10) // create an array with element which can be an expression using constructor function
 ```
 
-#### 2. Read and Write
+## 2. Read and Write
 
 ```js
 var a = [1, 2, 3, 4]
@@ -38,7 +40,7 @@ a.length // length of an array
 a[4] // undefined, it does not throw an error or do anything else, just return 'undefined'
 ```
 
-#### 3. Sparse Array
+## 3. Sparse Array
 
 ```js
 var a = new Array(5) // no element, a.length is 5
@@ -53,7 +55,7 @@ var a2 = [undefined] // undefined as an element
 0 in a2 // true, there is an element 'undefined' at index 0
 ```
 
-#### 4. Length
+## 4. Length
 
 ```js
 var a = [1, 2, 3, 4, 5]
@@ -63,7 +65,7 @@ a.length = 0 // []
 a.length = 5 // { length: 5 }
 ```
 
-#### 5. Add and Delete
+## 5. Add and Delete
 
 ```js
 a = []
@@ -76,7 +78,7 @@ a.length
 a.pop()
 ```
 
-#### 6. Iteration
+## 6. Iteration
 
 ```js
 var o = [1, 2, 3, 4, 5]
@@ -104,11 +106,11 @@ for (var i = 0; i < o.length; i++) {
 }
 ```
 
-#### 7. Multi-dimensional Array
+## 7. Multi-dimensional Array
 
 not mentioned this time
 
-#### 8. Methods
+## 8. Methods
 
 ```js
 // join()
@@ -130,7 +132,7 @@ not mentioned this time
 // toString() & toLocaleString()
 ```
 
-#### 9. ES5 Methods
+## 9. ES5 Methods
 
 ```js
 // forEach()
@@ -152,7 +154,7 @@ not mentioned this time
 // lastIndexOf()
 ```
 
-#### 10. ES6+ Methods
+## 10. ES6+ Methods
 
 ```js
 // Array.from()
@@ -232,21 +234,21 @@ a.flat(Infinity)
 b.flat()
 ```
 
-#### 13. Types of array
+## 13. Types of array
 
 ```js
 Array.isArray([])
 Array.isArray({})
 ```
 
-#### 14. Array-like Object
+## 14. Array-like Object
 
 not mentioned this time
 
-#### 15. String as an Array
+## 15. String as an Array
 
 not mentioned this time
 
-#### 16. Others
+## 16. Others
 
 read "oo js"
