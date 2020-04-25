@@ -25,7 +25,7 @@ const colors = {
   secondaryColor: "#277ABA",
   thirdColor: "#1D5C8C",
   fourthColor: "#143D5D",
-  fifthColor: "#0A1F2F"
+  fifthColor: "#0A1F2E"
 }
 
 const siteConfig = {
