@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://falesim.com/blog</id>
+    <id>https://falesim.cn/blog</id>
     <title>falesim Blog</title>
     <updated>2020-04-18T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://falesim.com/blog"/>
+    <link rel="alternate" href="https://falesim.cn/blog"/>
     <subtitle>The best place to stay up-to-date with the latest falesim news and events.</subtitle>
-    <logo>https://falesim.com/img/favicon.ico</logo>
+    <logo>https://falesim.cn/img/favicon.ico</logo>
     <rights>Copyright © 2020 falesim</rights>
     <entry>
         <title type="html"><![CDATA[Week 7: Build a document site with docusaurus and github action]]></title>
-        <id>https://falesim.com/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</id>
-        <link href="https://falesim.com/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html"/>
+        <id>https://falesim.cn/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</id>
+        <link href="https://falesim.cn/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html"/>
         <updated>2020-04-18T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-prerequisition"></a><a href="#0-prerequisition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Prerequisition:</h2>
 <ul>
@@ -32,8 +32,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week6: Introduction to Virtual DOM: second part of ReactJS serius]]></title>
-        <id>https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html</id>
-        <link href="https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html"/>
+        <id>https://falesim.cn/blog/2020/04/11/introduction-virtual-dom-second-part.html</id>
+        <link href="https://falesim.cn/blog/2020/04/11/introduction-virtual-dom-second-part.html"/>
         <updated>2020-04-11T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-review-in-brief-what-is-react-and-why-is-react-"></a><a href="#0-review-in-brief-what-is-react-and-why-is-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Review in brief: what is react and why is react ?</h2>
 <h4><a class="anchor" aria-hidden="true" id="keywords"></a><a href="#keywords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>keywords:</h4>
@@ -54,8 +54,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week5: Creative Commons]]></title>
-        <id>https://falesim.com/blog/2020/04/04/creative-commons.html</id>
-        <link href="https://falesim.com/blog/2020/04/04/creative-commons.html"/>
+        <id>https://falesim.cn/blog/2020/04/04/creative-commons.html</id>
+        <link href="https://falesim.cn/blog/2020/04/04/creative-commons.html"/>
         <updated>2020-04-04T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h4><a class="anchor" aria-hidden="true" id="chapter-1-知识共享定义"></a><a href="#chapter-1-知识共享定义" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 知识共享定义</h4>
 <hr>
@@ -76,8 +76,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week4: Readability of Javascript --- Part One: Naming]]></title>
-        <id>https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html</id>
-        <link href="https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html"/>
+        <id>https://falesim.cn/blog/2020/03/28/readability-of-javascript-part-one.html</id>
+        <link href="https://falesim.cn/blog/2020/03/28/readability-of-javascript-part-one.html"/>
         <updated>2020-03-28T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="chapter-1-代码应当易于理解"></a><a href="#chapter-1-代码应当易于理解" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 代码应当易于理解</h2>
 <hr>
@@ -98,8 +98,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week3: Introduction to React: first part of ReactJS series]]></title>
-        <id>https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html</id>
-        <link href="https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html"/>
+        <id>https://falesim.cn/blog/2020/03/21/introduction-to-react-first-part.html</id>
+        <link href="https://falesim.cn/blog/2020/03/21/introduction-to-react-first-part.html"/>
         <updated>2020-03-21T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-prerequisites"></a><a href="#0-prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. prerequisites</h2>
 <ul>
@@ -121,8 +121,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week2: Contract Structure]]></title>
-        <id>https://falesim.com/blog/2020/03/14/contract-structure.html</id>
-        <link href="https://falesim.com/blog/2020/03/14/contract-structure.html"/>
+        <id>https://falesim.cn/blog/2020/03/14/contract-structure.html</id>
+        <link href="https://falesim.cn/blog/2020/03/14/contract-structure.html"/>
         <updated>2020-03-14T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h1><a class="anchor" aria-hidden="true" id="合同结构"></a><a href="#合同结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>合同结构</strong></h1>
 <h3><a class="anchor" aria-hidden="true" id="_合同需要协助的人员_"></a><a href="#_合同需要协助的人员_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>合同需要协助的人员</em></h3>
@@ -144,8 +144,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Week 1: A Brief Introduction to Array in Javascript]]></title>
-        <id>https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</id>
-        <link href="https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html"/>
+        <id>https://falesim.cn/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</id>
+        <link href="https://falesim.cn/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html"/>
         <updated>2020-03-07T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h1><a class="anchor" aria-hidden="true" id="a-brief-introduction-to-array-in-javascript"></a><a href="#a-brief-introduction-to-array-in-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A Brief Introduction to Array in Javascript</h1>
 <h2><a class="anchor" aria-hidden="true" id="0-pre-requisites"></a><a href="#0-pre-requisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Pre-requisites</h2>

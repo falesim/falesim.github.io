@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>falesim Blog</title>
-        <link>https://falesim.com/blog</link>
+        <link>https://falesim.cn/blog</link>
         <description>The best place to stay up-to-date with the latest falesim news and events.</description>
         <lastBuildDate>Sat, 18 Apr 2020 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>falesim Blog</title>
-            <url>https://falesim.com/img/favicon.ico</url>
-            <link>https://falesim.com/blog</link>
+            <url>https://falesim.cn/img/favicon.ico</url>
+            <link>https://falesim.cn/blog</link>
         </image>
         <copyright>Copyright © 2020 falesim</copyright>
         <item>
             <title><![CDATA[Week 7: Build a document site with docusaurus and github action]]></title>
-            <link>https://falesim.com/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</link>
-            <guid>https://falesim.com/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</guid>
+            <link>https://falesim.cn/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</link>
+            <guid>https://falesim.cn/blog/2020/04/18/build-a-document-site-with-docusaurus-and-github-action.html</guid>
             <pubDate>Sat, 18 Apr 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-prerequisition"></a><a href="#0-prerequisition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Prerequisition:</h2>
 <ul>
@@ -32,8 +32,8 @@
         </item>
         <item>
             <title><![CDATA[Week6: Introduction to Virtual DOM: second part of ReactJS serius]]></title>
-            <link>https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html</link>
-            <guid>https://falesim.com/blog/2020/04/11/introduction-virtual-dom-second-part.html</guid>
+            <link>https://falesim.cn/blog/2020/04/11/introduction-virtual-dom-second-part.html</link>
+            <guid>https://falesim.cn/blog/2020/04/11/introduction-virtual-dom-second-part.html</guid>
             <pubDate>Sat, 11 Apr 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-review-in-brief-what-is-react-and-why-is-react-"></a><a href="#0-review-in-brief-what-is-react-and-why-is-react-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Review in brief: what is react and why is react ?</h2>
 <h4><a class="anchor" aria-hidden="true" id="keywords"></a><a href="#keywords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>keywords:</h4>
@@ -49,8 +49,8 @@
         </item>
         <item>
             <title><![CDATA[Week5: Creative Commons]]></title>
-            <link>https://falesim.com/blog/2020/04/04/creative-commons.html</link>
-            <guid>https://falesim.com/blog/2020/04/04/creative-commons.html</guid>
+            <link>https://falesim.cn/blog/2020/04/04/creative-commons.html</link>
+            <guid>https://falesim.cn/blog/2020/04/04/creative-commons.html</guid>
             <pubDate>Sat, 04 Apr 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h4><a class="anchor" aria-hidden="true" id="chapter-1-知识共享定义"></a><a href="#chapter-1-知识共享定义" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 知识共享定义</h4>
 <hr>
@@ -66,8 +66,8 @@
         </item>
         <item>
             <title><![CDATA[Week4: Readability of Javascript --- Part One: Naming]]></title>
-            <link>https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html</link>
-            <guid>https://falesim.com/blog/2020/03/28/readability-of-javascript-part-one.html</guid>
+            <link>https://falesim.cn/blog/2020/03/28/readability-of-javascript-part-one.html</link>
+            <guid>https://falesim.cn/blog/2020/03/28/readability-of-javascript-part-one.html</guid>
             <pubDate>Sat, 28 Mar 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="chapter-1-代码应当易于理解"></a><a href="#chapter-1-代码应当易于理解" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: 代码应当易于理解</h2>
 <hr>
@@ -83,8 +83,8 @@
         </item>
         <item>
             <title><![CDATA[Week3: Introduction to React: first part of ReactJS series]]></title>
-            <link>https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html</link>
-            <guid>https://falesim.com/blog/2020/03/21/introduction-to-react-first-part.html</guid>
+            <link>https://falesim.cn/blog/2020/03/21/introduction-to-react-first-part.html</link>
+            <guid>https://falesim.cn/blog/2020/03/21/introduction-to-react-first-part.html</guid>
             <pubDate>Sat, 21 Mar 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="0-prerequisites"></a><a href="#0-prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. prerequisites</h2>
 <ul>
@@ -101,8 +101,8 @@
         </item>
         <item>
             <title><![CDATA[Week2: Contract Structure]]></title>
-            <link>https://falesim.com/blog/2020/03/14/contract-structure.html</link>
-            <guid>https://falesim.com/blog/2020/03/14/contract-structure.html</guid>
+            <link>https://falesim.cn/blog/2020/03/14/contract-structure.html</link>
+            <guid>https://falesim.cn/blog/2020/03/14/contract-structure.html</guid>
             <pubDate>Sat, 14 Mar 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="合同结构"></a><a href="#合同结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>合同结构</strong></h1>
 <h3><a class="anchor" aria-hidden="true" id="_合同需要协助的人员_"></a><a href="#_合同需要协助的人员_" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>合同需要协助的人员</em></h3>
@@ -119,8 +119,8 @@
         </item>
         <item>
             <title><![CDATA[Week 1: A Brief Introduction to Array in Javascript]]></title>
-            <link>https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</link>
-            <guid>https://falesim.com/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</guid>
+            <link>https://falesim.cn/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</link>
+            <guid>https://falesim.cn/blog/2020/03/07/a-brief-introduction-to-array-in-javascript.html</guid>
             <pubDate>Sat, 07 Mar 2020 06:00:00 GMT</pubDate>
             <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="a-brief-introduction-to-array-in-javascript"></a><a href="#a-brief-introduction-to-array-in-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A Brief Introduction to Array in Javascript</h1>
 <h2><a class="anchor" aria-hidden="true" id="0-pre-requisites"></a><a href="#0-pre-requisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Pre-requisites</h2>
