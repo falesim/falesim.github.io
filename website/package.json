@@ -21,7 +21,7 @@
     "prettier": "2.0.4"
   },
   "name": "website",
-  "description": "Falesim Ltd(https://falesim.com)",
+  "description": "Falesim Ltd(https://falesim.cn)",
   "version": "0.0.1",
   "main": "siteConfig.js",
   "author": "sspantz <sspantiezheng@gmail.com> (https://sspantz.com/)",

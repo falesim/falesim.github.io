@@ -31,14 +31,14 @@ const colors = {
 const siteConfig = {
   title: "falesim", // Title for your website.
   tagline: "A team with creative",
-  url: "https://falesim.com", // Your website URL
+  url: "https://falesim.cn", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // CNAME
-  cname: "falesim.com",
+  cname: "falesim.cn",
 
   // Used for publishing and more
   projectName: "falesim",
@@ -105,7 +105,7 @@ const siteConfig = {
 
   // Sidebar
   // any postive number or 'ALL' or default
-  blogSidebarCount: 'ALL',
+  blogSidebarCount: "ALL",
   // change the sidebar title
   blogSidebarTitle: {
     default: "Recent posts",
