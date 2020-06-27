@@ -118,7 +118,10 @@ class Footer extends React.Component {
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
             <a href={`${this.props.config.baseUrl}help`}>Help</a>
             <a
-              href={`https://github.com/${this.props.config.organizationName}/${this.props.config.projectName}` + '.github.io'}
+              href={
+                `https://github.com/${this.props.config.organizationName}/${this.props.config.projectName}` +
+                ".github.io"
+              }
             >
               GitHub
             </a>
@@ -175,6 +178,20 @@ class Footer extends React.Component {
         </a>
         */}
         <section className="copyright">{this.props.config.copyright}</section>
+        <section
+          className="sitemap"
+          style={{
+            display: "flex",
+            justifyContent: "center"
+          }}
+        >
+          <a
+            href={`${this.props.config.register.url}`}
+            style={{color: "rgba(255, 255, 255, 0.4)"}}
+          >
+            {`${this.props.config.register.no}`}
+          </a>
+        </section>
       </footer>
     )
   }
