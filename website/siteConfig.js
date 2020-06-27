@@ -84,7 +84,12 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} falesim`,
+  copyright: `Copyright © 2016 - ${new Date().getFullYear()} falesim`,
+
+  register: {
+    no: `粤ICP备20005301号`,
+    url: `http://www.beian.miit.gov.cn/`
+  },
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
