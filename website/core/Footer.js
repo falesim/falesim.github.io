@@ -182,7 +182,8 @@ class Footer extends React.Component {
           className="sitemap"
           style={{
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
+            marginBottom: 0
           }}
         >
           <a
